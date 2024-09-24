@@ -27,11 +27,11 @@ type: page
 
 * GitHub：[Dobriyanchik](https://github.com/dobriyanchik)
 * Email：[dobriy88@yandex.ru](mailto:dobriy88@yandex.ru)
-* [Skype](https://join.skype.com/invite/kzYokJHlHmZN)
-* [Facebook](https://www.facebook.com/dobriyanchik)
-* [ResearchGate](https://www.researchgate.net/profile/Vitalii-Dobriian)
+* Skype: [dobriyanchik](https://join.skype.com/invite/kzYokJHlHmZN)
+* Facebook: [dobriyanchik](https://www.facebook.com/dobriyanchik)
+* ResearchGate: [Vitalii Dobriian](https://www.researchgate.net/profile/Vitalii-Dobriian)
 
 ## Projects I work on
 
-[Unicort.TAF](https://unicorn-taf.github.io) \| [ChaosSoftware](https://github.com/chaossoftware)
+[Unicorn.TAF](https://unicorn-taf.github.io) \| [ChaosSoftware](https://github.com/chaossoftware)
 
