@@ -2,7 +2,6 @@
 layout: post
 title:  "Windows 10/11 (WSL) jekyll quick start"
 date:   2024-09-24 13:10:00
-categories: jekyll
 tags: jekyll wsl
 author: Dobriyanchik
 ---

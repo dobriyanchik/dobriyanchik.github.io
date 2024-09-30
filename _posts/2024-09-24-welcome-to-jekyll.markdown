@@ -2,7 +2,6 @@
 layout: post
 title:  "hello jekyll!"
 date:   2024-09-24 13:05:00
-categories: jekyll
 tags: jekyll
 excerpt: This is Jekyll post existing by default. Could be used as reference
 mathjax: true
@@ -39,3 +38,4 @@ $$
 
 Inline Mathjax $a \neq b$
 
+[More useful Mathjax examples](https://jojozhuang.github.io/tutorial/mathjax-cheat-sheet-for-mathematical-notation/)
