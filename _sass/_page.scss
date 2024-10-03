@@ -34,6 +34,11 @@
             li {
                 line-height: 1.8;
                 color: #888888;
+                .excerpt img {
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                }
                 time {
                     display: inline-block;
                     width: 135px;
