@@ -5,6 +5,23 @@
     font-style: normal;
 }
 
+@media (prefers-color-scheme: light) {
+    code {
+        color: #000;
+        background-color: rgba(0, 0, 0, 0.06);
+        border: 1px solid #d7d0d2;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    code {
+        color: #a7a7a7;
+        background-color: rgba(255, 255, 255, 0.06);
+        border: 1px solid #35353a;
+    }
+}
+
 /**
  * Syntax highlighting styles
  */
@@ -13,9 +30,6 @@ code{
     margin: 0 2px;
     font-size: 90%;
     border-radius: 3px;
-    color: #000;
-    background-color: rgba(0, 0, 0, 0.06);
-    border: 1px solid #d7d0d2;
     font-family: "Source Code Pro",monospace,sans-serif;
 }
 

@@ -7,6 +7,44 @@
 .clearfix {
     *zoom: 1;
 }
+
+@media (prefers-color-scheme: light) {
+    .page .left {
+        background-color: #f8f8fd;
+    }
+    
+    .page .right .side {
+        background-color: #f8f8fd;
+    }
+
+    .page .left ul li .title {
+        color: #223253;
+    }
+
+    .page .left ul li .pageTag a {
+        background-color: #c6cbe9;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    .page .left {
+        background-color: #3c3c43;
+    }
+    
+    .page .right .side {
+        background-color: #3c3c43;
+    }
+
+    .page .left ul li .title {
+        color: #4d6dad;
+    }
+
+    .page .left ul li .pageTag a {
+        background-color: #818597;
+    }
+}
+
 .page {
     width: 1140px;
     box-sizing: border-box;
@@ -18,7 +56,7 @@
         padding: 20px 30px;
         line-height: 1.6;
         font-size: 16px;
-        background-color: #f8f8fd;
+        
         box-shadow: 0 1px 2px rgba(0,0,0,0.4),0 0 30px rgba(10,10,0,0.1) inset;
         >h1 {
             margin-bottom: -10px;
@@ -45,7 +83,6 @@
                 }
                 .title {
                     font-weight: bold;
-                    color: #223253;
                     transition: 0.3s ease;
                     &:hover {
                         color: #4d6dad;
@@ -78,7 +115,6 @@
 
                         // border: 1px solid #aaa;
                         padding: 0 5px;
-                        background-color: #c6cbe9;
                         border-radius: 4px;
                         color: #fff;
                         font-size: 90%;
@@ -109,7 +145,6 @@
         }
         .side {
             box-sizing: border-box;
-            background-color: #f8f8fd;
             box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3), 0 0 30px rgba(10, 10, 0, 0.1) inset;
             padding-bottom: 1px;
             -ms-word-break: break-all;

@@ -1,3 +1,24 @@
+@media (prefers-color-scheme: light) {
+    .page[index] .left > ul > li {
+        color: #333;
+    }
+
+    .page[index] .right .wrap .side .content-ul[cate] li a .badge {
+        background-color: #bbb;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #a7a7a7;
+    }
+
+    .page[index] .right .wrap .side .content-ul[cate] li a .badge {
+        background-color: #818597;
+    }
+}
+
 .page[index] {
     a {
         color: #4d6dad;
@@ -13,7 +34,6 @@
                 list-style: none;
             }
             li {
-                color: #333;
                 h2 {
                     border: none;
                     font-size: 27px;
@@ -118,7 +138,6 @@
                                 padding: 0 10px;
                                 font-size: 12px;
                                 color: #fff;
-                                background-color: #bbb;
                                 border-radius: 50%;
                                 transition: 0.5s ease-in-out;
                             }

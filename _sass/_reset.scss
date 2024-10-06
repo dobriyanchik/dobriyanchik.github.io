@@ -5,6 +5,27 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: Sansation;
+    src: url('../assets/fonts/Sansation-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Sansation;
+    src: url('../assets/fonts/Sansation-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Sansation;
+    src: url('../assets/fonts/Sansation-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body,
 html,
 div,
@@ -33,10 +54,55 @@ h6 {
 html {
     height: 100%;
 }
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-image: url(/assets/images/background-light.avif);
+        color: #333;
+    }
+
+    blockquote {
+        color: #444;
+    }
+
+    tbody {
+        tr {
+            &:nth-of-type(2n+1) {
+                background-color: #f8f8fd;
+            }
+            &:nth-of-type(2n) {
+                background-color: #e5eaed;
+            }
+        }
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-image: url(/assets/images/background-dark.avif);
+        color: #a7a7a7;
+    }
+
+    blockquote {
+        color: #bebebe;
+    }
+
+    tbody {
+        tr {
+            &:nth-of-type(2n+1) {
+                background-color: #3c3c43;
+            }
+            &:nth-of-type(2n) {
+                background-color: #35353a;
+            }
+        }
+    }
+}
+
 body {
     font-family: 'Sansation',sans-serif;
-    color: #333;
-    background-image: url(https://gw.alicdn.com/tfs/TB1xzbUumBYBeNjy0FeXXbnmFXa-125-121.png);
+    
     position: relative;
     min-height: 100%;
     padding-bottom: 190px;
@@ -80,7 +146,6 @@ h6 {
     margin: 10px 0 5px;
 }
 blockquote {
-    color: #444;
     border-left: 5px solid #D6DBDF;
     padding-left: 15px;
     background: rgba(112,138,153,.1);
@@ -103,16 +168,6 @@ table {
     th {
         padding: 2px 10px;
         text-align: left;
-    }
-    tbody {
-        tr {
-            &:nth-of-type(2n+1) {
-                background-color: #f8f8fd;
-            }
-            &:nth-of-type(2n) {
-                background-color: #e5eaed;
-            }
-        }
     }
     td {
         padding: 2px 10px;
