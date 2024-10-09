@@ -2,7 +2,7 @@
 layout: post
 title:  "GUI test automation approach"
 date:   2024-10-09 13:00:00
-categories: Automated-testing
+categories: Automated-Testing
 tags: automated-testing gui unicorn-taf
 author: Dobriyanchik
 ---
@@ -31,7 +31,7 @@ So for the same user experience one gets completely different code. Below an exa
 // PageObject description using Selenium.
 public class SignInBlock
 {
-    protected WebDriver driver;
+    private readonly WebDriver _driver;
 
     private readonly By _usernameBy = By.Id("email");
     private readonly By _passwordBy = By.Id("password");
@@ -39,7 +39,7 @@ public class SignInBlock
 
     public SignInBlock(WebDriver driver)
     {
-        this.driver = driver;
+        _driver = driver;
     }
 
     public void LoginValidUser(string userName, string password)
@@ -49,7 +49,6 @@ public class SignInBlock
         driver.FindElement(_signInButtonBy).Click();
     }
 }
-
 ```
 
 #### Desktop
@@ -57,11 +56,11 @@ public class SignInBlock
 // PageObject description using Microsoft UI Automation.
 public class SignInBlock
 {
-    protected CUIAutomation8 driver;
+    private readonly CUIAutomation8 _driver;
 
     public SignInBlock(CUIAutomation8 driver)
     {
-        this.driver = driver;
+        _driver = driver;
     }
 
     private IUIAutomationCondition UsernameCnd =>
@@ -73,7 +72,6 @@ public class SignInBlock
     private IUIAutomationCondition SignInButtonCnd =>
         driver.CreatePropertyCondition(UIA_NamePropertyId, "Sign In");
 
-
     public void LoginValidUser(string userName, string password)
     {
         SetText(GetElementBy(UsernameCnd), userName);
@@ -84,7 +82,6 @@ public class SignInBlock
     //... 
     // and more code for implementation of GetElementBy, SetText and ClickOn
 }
-
 ```
 
 **That's disgusting! Both code snippets are totally different**
@@ -129,10 +126,10 @@ But there is one more property which describes complex controls: complex control
             └───────────────────────┘              
 ```
 
-And I think such approach should be a standard when one work on GUI test automation.
+And I think such approach should be a standard when one works on GUI test automation.
 
 ## Unicorn.TAF
-When I started to develop UI modules of [Unicorn.TAF](https://unicorn-taf.github.io) aspects I highlighted above were most significant drivers for me. I wanted to free test automation from using different UI libs APIs, co-living assertion libs or approaches to check UI on different platforms.
+When I started to develop UI modules of [Unicorn.TAF](https://unicorn-taf.github.io), aspects I highlighted above were most significant drivers for me. I wanted to free test automation from using different UI libs APIs, co-living assertion libs or approaches to check UI on different platforms.
 
 Unicorn provides with common and unified mechanism of work with GUI which is platform and UI independent and could be extended to use any underlying "driver" lib keeping the same unified API. it provides with set of already defined "behaviors" described by interfaces such as `IExpandable`, `ISelectable`, `ILoadable` etc. what makes possible to reuse common UI asssertions among all platforms and UI types and to obtain high level of reusability and to speed up coding process.
 
@@ -142,7 +139,6 @@ For the same example with Sign In form presented in first section code for Web a
 ```csharp
 public class SignInBlock : WebPage
 {
-
     [ById("email")]
     private readonly TextInput _username;
 
@@ -167,7 +163,6 @@ public class SignInBlock : WebPage
 ```csharp
 public class SignInBlock : Window
 {
-
     [ById("email")]
     private readonly TextInput _username;
 
@@ -188,5 +183,27 @@ public class SignInBlock : Window
 }
 ```
 **Magic!**
+
+Even such code is possible with Unicorn:
+
+```csharp
+// Create new unicorn Chrome driver
+IDriver driver = new DesktopWebDriver(BrowserType.Chrome);
+
+// Search for web element in browser
+IControl someControl = driver.Find<WebControl>(ByLocator.Id("someId"));
+
+// Perofrm some check on the element
+Assert.That(someControl, UI.Control.HasTextMatching("[0-9]*"));
+
+// web driver becomes Windows desktop driver
+driver = WinDriver.Instance;
+
+// someElement web element becomes Windows GUI element
+someControl = driver.Find<WinControl>(ByLocator.Class("Button"));
+
+// Perform the same check on new element
+Assert.That(someControl, UI.Control.HasTextMatching("[0-9]*"));
+```
 
  > For more references see [repo with framework usage examples](https://github.com/Unicorn-TAF/examples)
