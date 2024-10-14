@@ -1,8 +1,8 @@
 ---
-layout: post
-title:  "hello jekyll!"
-date:   2024-09-24 13:05:00
-tags: jekyll
+layout:  post
+title:   "hello jekyll!"
+date:    2024-09-24 13:05:00
+tags:    jekyll
 excerpt: This is Jekyll post existing by default. Could be used as reference
 mathjax: true
 ---
