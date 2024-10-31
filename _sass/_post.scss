@@ -21,10 +21,6 @@
     a {
         color: #4d6dad;
         transition: 0.5s ease;
-        &:hover {
-            color: #223253;
-            background-color: #f4efeb;
-        }
     }
     article img {
         margin-left: auto;
@@ -63,23 +59,39 @@
 
 @media (prefers-color-scheme: light) {
 
-    .page .left ul > h2 {
-        color: #333;
+    .page .left ul {
+        > h2 {
+            color: #333;
+        }
+
+        li {
+            color: #333;
+        }
     }
 
-    .page .left ul li {
-        color: #333;
+    .page[post] a {
+        &:hover {
+            color: #223253;
+        }
     }
 }
 
 
 @media (prefers-color-scheme: dark) {
-    .page .left ul > h2 {
-        color: #a7a7a7;
-    }
+    .page .left ul {
+        > h2 {
+            color: #a7a7a7;
+        }
 
-    .page .left ul li {
-        color: #a7a7a7;
+        li {
+            color: #a7a7a7;
+        }
+    } 
+
+    .page[post] a {
+        &:hover {
+            color: #779adf;
+        }
     }
 }
 

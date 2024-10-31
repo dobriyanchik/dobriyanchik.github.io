@@ -6,6 +6,12 @@
     .page[index] .right .wrap .side .content-ul[cate] li a .badge {
         background-color: #bbb;
     }
+
+    .page[index] a {
+        &:hover {
+            color: #223253;
+        }
+    }
 }
 
 
@@ -17,15 +23,18 @@
     .page[index] .right .wrap .side .content-ul[cate] li a .badge {
         background-color: #818597;
     }
+
+    .page[index] a {
+            &:hover {
+                color: #779adf;
+            }
+        }
 }
 
 .page[index] {
     a {
         color: #4d6dad;
         transition: 0.5s ease;
-        &:hover {
-            color: #223253;
-        }
     }
     .left {
         >ul {
