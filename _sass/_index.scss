@@ -3,8 +3,14 @@
         color: #333;
     }
 
-    .page[index] .right .wrap .side .content-ul[cate] li a .badge {
-        background-color: #bbb;
+    .page[index] .right .wrap .side .content-ul[cate] li a {
+        &:hover {
+            background-color: #dbdfee;
+        }
+        
+        .badge {
+            background-color: #bbb;
+        }
     }
 
     .page[index] a {
@@ -20,8 +26,14 @@
         color: #a7a7a7;
     }
 
-    .page[index] .right .wrap .side .content-ul[cate] li a .badge {
-        background-color: #818597;
+    .page[index] .right .wrap .side .content-ul[cate] li a {
+        &:hover {
+            background-color: #686a70;
+        }
+
+        .badge {
+            background-color: #818597;
+        }
     }
 
     .page[index] a {
@@ -127,7 +139,6 @@
                             padding: 2px 0;
                             border-bottom: 1px solid #eee;
                             &:hover {
-                                background-color: #dbdfee;
                                 .badge {
                                     background-color: #dbdfee;
                                     transform: scale(1.2) rotate(360deg);
