@@ -3,7 +3,6 @@ layout: post
 title:  "Demoscenes"
 date:   2024-10-02 21:40:00
 tags:   coding art
-author: Dobriyanchik
 ---
 
 * content

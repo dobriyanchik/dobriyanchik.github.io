@@ -2,9 +2,8 @@
 layout:     post
 title:      "GUI test automation approach"
 date:       2024-10-09 13:00:00
-categories: Automated-Testing
-tags:       coding automated-testing gui unicorn-taf
-author:     Dobriyanchik
+categories: Automated_testing
+tags:       coding .net automated-testing gui unicorn-taf
 ---
 
 * content

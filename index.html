@@ -21,16 +21,15 @@ layout: default
                         {% if post.author %}<i class="fa fa-user"></i>{{ post.author }}
                         {% endif %}
                     </div>
-                    <div class="label-card">
-                        {% if page.meta %}<i class="fa fa-key"></i>{{ page.meta }}  {% endif %}
-                    </div>
-
-                    <div class="label-card">
-                    {% include category.html %}
-                    </div>
+                    
+                    <br/>
 
                     <div class="label-card">
                     {% include tag.html %}
+                    </div>
+
+                    <div class="label-card label-category">
+                      {% include category.html %}
                     </div>
                 </div>
                 <div class="excerpt">

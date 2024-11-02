@@ -9,6 +9,10 @@ type: page
 * content
 {:toc}
 
+## .NET
+
+ - [Meziantou's blog](https://www.meziantou.net)
+
 ## Draw & Design
 
  - [ASCIIFlow](https://asciiflow.com/#/)

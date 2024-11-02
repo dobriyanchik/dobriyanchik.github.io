@@ -20,23 +20,23 @@
                         color: #223253;
                     }
                 }
-    
-                .pageTag a {
-                    background-color: #c6cbe9;
-                    color: #fff;
+            }
 
-                    &:hover {
-                        background-color: #c0ddc7;
-                    }
+            .pageTag a {
+                background-color: #c6cbe9;
+                color: #fff;
+
+                &:hover {
+                    background-color: #c0ddc7;
                 }
+            }
 
-                .categories a {
-                    background-color: #9e9d9d;
-                    color: #fff;
+            .categories a {
+                background-color: #9e9d9d;
+                color: #fff;
 
-                    &:hover {
-                        background-color: #b6b6b9;
-                    }
+                &:hover {
+                    background-color: #b6b6b9;
                 }
             }
         }
@@ -67,23 +67,23 @@
                         color: #779adf;
                     }
                 }
-    
-                .pageTag a {
-                    background-color: #585b66;
-                    color: #c3c3c3;
+            }
 
-                    &:hover {
-                        background-color: #7e8291;
-                    }
+            .pageTag a {
+                background-color: #585b66;
+                color: #c3c3c3;
+
+                &:hover {
+                    background-color: #7e8291;
                 }
+            }
 
-                .categories a {
-                    background-color: #4a4a4a;
-                    color: #c3c3c3;
+            .categories a {
+                background-color: #4a4a4a;
+                color: #c3c3c3;
 
-                    &:hover {
-                        background-color: #666666;
-                    }
+                &:hover {
+                    background-color: #666666;
                 }
             }
         }
@@ -112,7 +112,7 @@
         padding: 20px 30px;
         line-height: 1.6;
         font-size: 16px;
-        
+
         >h1 {
             margin-bottom: -10px;
         }
@@ -144,32 +144,34 @@
                 i {
                     margin-right: 5px;
                 }
-                .categories {
-                    padding: 0 15px;
-                    i {
-                        color: #9e9d9d;
-                    }
-                    a {
-                        padding: 0 5px;
-                        font-size: 90%;
-                        transition: 0.3s ease;
+            }
+        }
 
-                    }
-                }
-                .pageTag {
-                    i {
-                        color: #c6cbe9;
-                    }
-                    a {
+        .categories {
 
-                        // border: 1px solid #aaa;
-                        padding: 0 5px;
-                        border-radius: 4px;
-                        font-size: 90%;
-                        transition: 0.3s ease;
+            padding: 0 15px;
+            i {
+                color: #9e9d9d;
+            }
+            a {
+                padding: 0 5px;
+                font-size: 90%;
+                transition: 0.3s ease;
 
-                    }
-                }
+            }
+        }
+        .pageTag {
+            i {
+                color: #c6cbe9;
+            }
+            a {
+
+                // border: 1px solid #aaa;
+                padding: 0 5px;
+                border-radius: 4px;
+                font-size: 90%;
+                transition: 0.3s ease;
+
             }
         }
     }
