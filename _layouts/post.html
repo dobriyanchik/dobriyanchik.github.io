@@ -29,9 +29,12 @@ layout: default
             {% if page.meta %}
             <br/>
             <hr>
-            <div class="label-card">
-                <i class="fa fa-key"></i>{{ page.meta }}  
-            </div>
+                {% for metarecord in page.meta %}
+                <div class="label-card">
+                    <i class="fa fa-key"></i>{{ metarecord }}  
+
+                </div>
+                {% endfor %}
             {% endif %}
         </div>
         <hr>
@@ -90,8 +93,6 @@ layout: default
                     <li><a href="#comments">Comments</a></li>
                 </ul>
             </div>
-            <!-- 其他div框放到这里 -->
-            <!-- <div class="side">bbbb</div> -->
         </div>
     </div>
 </div>
