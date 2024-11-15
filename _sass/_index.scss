@@ -180,6 +180,8 @@
                 }
                 .tags-cloud {
                     font-weight: normal;
+                    word-break: break-word;
+                    text-align: center;
                     a {
                         padding: 0 3px;
                         border-radius: 5px;
