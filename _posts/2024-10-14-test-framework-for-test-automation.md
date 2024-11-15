@@ -2,7 +2,7 @@
 layout:     post
 title:      "Test framework for test automation"
 date:       2024-10-14 19:30:00
-categories: Automated_testing
+categories: ["Automated testing"]
 tags:       coding .net automated-testing unicorn-taf
 ---
 
