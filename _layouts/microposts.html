@@ -1,8 +1,5 @@
 ---
 layout: default
-pagination:
-  enabled: true
-  collection: microblog
 ---
 
 <div class="page clearfix" index>
@@ -11,7 +8,7 @@ pagination:
       <small>some mixed life stuff</small>
       <hr>
       <ul>
-          {% for post in paginator.posts %}
+          {% for post in site.microblog %}
             {%- assign date_format = "%b %-d, %Y" -%}
             <li>
               <h2>
