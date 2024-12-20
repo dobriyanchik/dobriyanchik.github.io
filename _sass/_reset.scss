@@ -57,7 +57,8 @@ html {
 
 @media (prefers-color-scheme: light) {
     body {
-        background-image: url(/assets/images/background-light.avif);
+        background-color: #d9dbdf;
+        //background-image: url(/assets/images/background-light.avif);
         color: #333;
     }
 
@@ -80,7 +81,8 @@ html {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-image: url(/assets/images/background-dark.avif);
+        background-color: #222629;
+        //background-image: url(/assets/images/background-dark.avif);
         color: #a7a7a7;
     }
 

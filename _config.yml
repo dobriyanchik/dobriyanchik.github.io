@@ -40,11 +40,37 @@ category_dir: category/
 tag_dir: tag/
 
 # excerpt
-excerpt_separator: "\n\n\n\n"
+excerpt_separator: "* * *"
 
-# paginate
-gems: [jekyll-paginate]
-paginate: 10
+# Collections
+collections:
+  microblog:
+    output: true
+
+# Pagination for microposts
+pagination:
+  enabled: true
+  collection: 
+    microblog:
+      per_page: 10
+      sort_reverse: true
+      title: "Microblog"
+      permalink: /microposts/page:num/
+
+# Pagination for posts
+pagination:
+  enabled: true
+  collection: posts  # This is the default posts collection
+  per_page: 5       # Number of posts per page
+  sort_reverse: true
+  permalink: /page:num/  # URL format for paginated pages
 
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
+
+defaults:
+  - scope:
+      path: ""
+      type: "microblog"
+    values:
+      layout: "micropost"

@@ -11,8 +11,7 @@ tags:       coding .net automated-testing gui unicorn-taf
 
 There are a lot of different tools and frameworks for GUI testing available to test automation community. It's really great that one is able to choose the tool best suitable for specific needs from a big number of options. But most of them are low-level tools designed to be a "driver" to specific platform or GUI implementation. Test automation engineer is a human who wants to interact with GUI in the same way independently on specific GUI nature. The world of free tools lacks in comprehensive and unified high-level approach for GUI testing (everything is better in world of proprietary tools, but let's focus on "free" world)
 
-
-
+* * *
 
 
 ## Problem statement

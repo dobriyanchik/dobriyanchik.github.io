@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{%- assign date_format = "%b %-d, %Y" -%}
+
+<div class="page clearfix" post>
+    <div class="left micropost">
+        <h1>{{page.date | date: date_format}}</h1>
+
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        {{content}}
+        </article>
+        <hr>
+
+        <h2 id="comments">Comments</h2>
+        {% include comments.html %}
+
+    </div>
+    <!-- <button class="anchor"><i class="fa fa-anchor"></i></button> -->
+
+</div>

@@ -15,8 +15,7 @@ Recently my [colleague](https://ummshsh.github.io) sent me a link to a [video ab
 And really what's wrong with them?  
 Spoiler: nothing, but ...
 
-
-
+* * *
 
 
 ## But what?

@@ -14,8 +14,7 @@ Tinkerbell map is a discrete-time dynamical system. Unlike [Hénon map](2024/09/
 
 ![Tinkerbell map attractor](/assets/sci-data/tinkerbell_attractor.png)
 
-
-
+* * *
 
 
 Funny fact:

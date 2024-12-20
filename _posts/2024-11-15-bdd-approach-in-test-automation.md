@@ -11,8 +11,7 @@ tags:       automated-testing
 
 From my point of view and my personal (and not only mine) experience in test automation area BDD is a very controversial approach. From one side according to many resources and examples it looks cool and promising, should solve some typical problems and make life better. From the other side by some magic reason personally me don't have at least one real world example (even in my colleagues experience) where the approach reached this goal. It's time to dive deeper to see why this happens...
 
-
-
+* * *
 
 
 ## What is BDD

@@ -11,8 +11,7 @@ tags:   coding art
 About 15 years ago when I studied at university we had course of lectures on Assembly language. One day I with a classmate were in process of preparation to seminar where we planned to demonstrate our work with some graphics visualisations programmed on Assembly. During the preparation we had been searching for some usefull references for our work over the internet and found some really interesting area called **Demoscenes** which I personally consider as art in programming and visualization.
 ![fr-041: debris](/assets/images/demoscene-fr-041-debris.jpg)
 
-
-
+* * *
 
 
  > _"The demoscene is an international computer art subculture focused on producing demos: self-contained, sometimes extremely small, computer programs that produce audiovisual presentations. The purpose of a demo is to show off programming, visual art, and musical skills. Demos and other demoscene productions (graphics, music, videos, games) are shared, voted on and released online at festivals known as demoparties."_<sup>[Wikipedia](https://en.wikipedia.org/wiki/Demoscene)</sup>
