@@ -8,11 +8,11 @@ layout: default
       <small>some mixed life stuff</small>
       <hr>
       <ul>
-          {% for post in site.microblog %}
+          {% for post in site.microblog reversed %}
             {%- assign date_format = "%b %-d, %Y" -%}
             <li>
               <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date: date_format }}</a>
+                <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: date_format }}</a>
               </h2>
 
               <div class="excerpt">

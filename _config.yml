@@ -46,6 +46,7 @@ collections:
   posts:
     permalink: /:path/
   microblog:
+    output: true
     permalink: /microblog/:path/
 
 # paginate

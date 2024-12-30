@@ -20,7 +20,7 @@ Spoiler: nothing, but ...
 
 ## But what?
 
-Many of the well-known unit testing frameworks are really good, popular and used across the whole world, some of them are full of different useful fefatures like NUnit, some of them are simplier but in the same time more flexible and extenbale like XUnit. Each can find more suitable framework. But... all of them are UNIT testing frameworks.
+Many of the well-known unit testing frameworks are really good, popular and used across the whole world, some of them are full of different useful features like NUnit, some of them are simplier but in the same time more flexible and extendable like XUnit. Each can find more suitable framework. But... all of them are **UNIT** testing frameworks.
 
 So what test automation engineers may miss in all of them?
 
@@ -31,7 +31,7 @@ Automated testing likes meaningful readable reports. Why? Because at least in ca
 
  > Of course all of popular unit test frameworks have adapters for majority of known reporting tools.
 
-The thing is that all of these frameworks does not have built-in  very common attributes/features used in test automation (and they don't have to because they are unit testing frameworks :) )
+The thing is that all of these frameworks does not have built-in very common attributes/features used in test automation (and they don't have to because they are unit testing frameworks :) )
 
 Some of features I mean are:
  - Test steps
