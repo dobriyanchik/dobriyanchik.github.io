@@ -28,6 +28,9 @@ google_analytics_id: G-YR3KJ3C6HH # google analytics id
 # Build settings
 markdown: kramdown
 
+plugins:
+  - jekyll-paginate-v2
+
 kramdown:
   input: GFM
   syntax_highlighter: rouge
@@ -42,19 +45,28 @@ tag_dir: tag/
 # excerpt
 excerpt_separator: "* * *"
 
+# Collections
 collections:
-  posts:
-    permalink: /:path/
   microblog:
     output: true
-    permalink: /microblog/:path/
 
-# paginate
-gems: [jekyll-paginate]
-paginate: 10
+# Pagination for microposts (using jekyll-paginate-v2)
+pagination:
+  enabled: true
+  collection: 
+    microblog:
+      per_page: 5
+      sort_reverse: true
+      title: "Microblog"
+      permalink: /microposts/page:num/
 
-plugins:
-  - jekyll-paginate
+pagination:
+  enabled: true
+  collection: posts  # This is the default posts collection
+  per_page: 10       # Number of posts per page
+  sort_reverse: true
+  permalink: /page:num/  # URL format for paginated pages
+
 
 defaults:
   - scope:
