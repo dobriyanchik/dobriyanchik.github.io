@@ -1,0 +1,63 @@
+<!--
+  Refactor the HTML structure.
+-->
+
+{% assign _content = include.content %}
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+{% if _content contains '<pre class="highlight">' %}
+  {% assign _content = _content
+    | replace: '<div class="highlight"><pre class="highlight"><code', '<div class="highlight"><code'
+  %}
+{% endif %}
+
+<!-- Add header for code snippets -->
+
+{% if _content contains '<div class="highlight"><code>' %}
+  {% assign _code_spippets = _content | split: '<div class="highlight"><code>' %}
+  {% assign _new_content = '' %}
+
+  {% for _snippet in _code_spippets %}
+
+    {% if forloop.last %}
+      {% assign _new_content = _new_content | append: _snippet %}
+
+    {% else %}
+
+      {% assign _left = _snippet | split: '><' | last%}
+
+      {% assign _lang = _left | split: 'language-' | last | split: ' ' | first %}
+      {% capture _label_text %}{% include language-alias.html language=_lang %}{% endcapture %}
+      {% assign _label_icon = 'fa fa-code' %}
+
+      {% capture _label %}
+        <span data-label-text="{{ _label_text | strip }}"></span>
+      {% endcapture %}
+
+      {% assign _new_content = _new_content | append: _snippet
+          | append: '<div class="highlight">'
+          | append: '<div class="code-header">'
+          | append: _label
+          | append: '</div>'
+          | append: '<pre class="highlight"><code>'
+      %}
+
+        <!-- <span data-label-text="{{ _label_text | strip }}"><i class="{{ _label_icon }}"></i></span> -->
+        <!-- | append: '<button aria-label="copy" data-title-succeed="Copied!"><i class="fa fa-clipboard"></i></button>' -->
+
+    {% endif %}
+
+  {% endfor %}
+
+  {% assign _content = _new_content %}
+
+{% endif %}
+
+<!-- return -->
+
+{{ _content }}

@@ -11,7 +11,7 @@ type: page
 
 <img src="/assets/images/photo-me.jpg" alt="Photo of Me" width="250">
 
-Primarily working in IT as lead software test automation engineer with wide experience in different tech stacks and big number of tools for Web, Desktop, API and DB automation. Creator of open-source test automation framework [Unicorn.TAF](https://unicorn-taf.github.io/). Chapter lead, technical interviewer, mentor.
+[>](/microblog) Primarily working in IT as lead software test automation engineer with wide experience in different tech stacks and big number of tools for Web, Desktop, API and DB automation. Creator of open-source test automation framework [Unicorn.TAF](https://unicorn-taf.github.io/). Chapter lead, technical interviewer, mentor.
 
 My main hobbies are science and music. 
 

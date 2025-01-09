@@ -39,7 +39,11 @@ layout: default
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        {{content}}
+          {% capture _content %}
+              {% include refactor-content.html content=content %}
+          {% endcapture %}
+
+          {{ _content }}
         </article>
         <hr>
 

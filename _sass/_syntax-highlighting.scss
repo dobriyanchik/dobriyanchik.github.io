@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Source Code Pro';
+    font-family: 'Iosevka Mono';
     src: url('../assets/fonts/IosevkaMono-NormalRegular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
@@ -33,9 +33,37 @@ pre {
      }
 }
 
+.code-header {
+  
+    border-radius: 3px;
+    padding: 0 10px 0 10px;
+    font-family: "Iosevka Mono",monospace,sans-serif;
+    float: right;
+    margin-right: 10px;
+    margin-top: -12.5px;
+    justify-content: space-between;
+    align-items: center;
+    font-size-adjust: 0.55;
+    font-weight: 300;
+  
+    /* the label block */
+    span {
+  
+      /* label text */
+      &::after {
+        content: attr(data-label-text);
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+    }
+}
 
 
 @media (prefers-color-scheme: light) {
+    .code-header {
+        background-color: #f1f2f7;
+    }
+
     code {
         color: #000;
         background-color: rgba(0, 0, 0, 0.06);
@@ -119,6 +147,10 @@ pre {
 
 
 @media (prefers-color-scheme: dark) {
+    .code-header {
+        background-color: #24283b;
+    }
+    
     code {
         color: #a7a7a7;
         background-color: rgba(255, 255, 255, 0.06);
