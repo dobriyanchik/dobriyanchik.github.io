@@ -43,12 +43,12 @@
           | append: '<div class="highlight">'
           | append: '<div class="code-header">'
           | append: _label
-          | append: '</div>'
+        | append: '<button class="copy-code" data-title-succeed="Copied!" onclick="copyCode(this);"><i class="fa fa-files-o"></i></button>'
+        | append: '</div>'
           | append: '<pre class="highlight"><code>'
       %}
 
         <!-- <span data-label-text="{{ _label_text | strip }}"><i class="{{ _label_icon }}"></i></span> -->
-        <!-- | append: '<button aria-label="copy" data-title-succeed="Copied!"><i class="fa fa-clipboard"></i></button>' -->
 
     {% endif %}
 
