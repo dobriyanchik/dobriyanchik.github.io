@@ -8,7 +8,7 @@ layout: default
       <small>some mixed life stuff</small>
       <hr>
       <ul>
-          {% for post in site.microblog reversed %}
+          {% for post in paginator.posts %}
             {%- assign date_format = "%b %-d, %Y" -%}
             <li>
               <h2>
@@ -27,36 +27,36 @@ layout: default
           {% endfor %}
       </ul>
 
-        <!-- Pagination links -->
-        <div class="pagination">
-          {% if paginator.previous_page %}
-            <a href="/microblog" class="previous"><i class="fa fa-angle-double-left"></i></a>
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><i class="fa fa-angle-left"></i></a>
-          {% else %}
-            <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
-            <span class="previous disable"><i class="fa fa-angle-left"></i></span>
-          {% endif %}
-          <span class="page_number ">{{ paginator.page }}/{{ paginator.total_pages }}</span>
-          {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="next"><i class="fa fa-angle-right"></i></a>
-            <a href="{{ site.baseurl }}/microblog/page{{ paginator.total_pages }}" class="next"><i class="fa fa-angle-double-right"></i></a>
-          {% else %}
-            <span class="next disable"><i class="fa fa-angle-right"></i></span>
-            <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
-          {% endif %}
-        </div>
+      <!-- Pagination links -->
+      <!-- <div class="pagination">
+        {% if paginator.previous_page %}
+          <a href="/microblog" class="previous"><i class="fa fa-angle-double-left"></i></a>
+          <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous"><i class="fa fa-angle-left"></i></a>
+        {% else %}
+          <span class="previous disable"><i class="fa fa-angle-double-left"></i></span>
+          <span class="previous disable"><i class="fa fa-angle-left"></i></span>
+        {% endif %}
+        <span class="page_number ">{{ paginator.page }}/{{ paginator.total_pages }}</span>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="next"><i class="fa fa-angle-right"></i></a>
+          <a href="{{ site.baseurl }}/microblog/page{{ paginator.total_pages }}" class="next"><i class="fa fa-angle-double-right"></i></a>
+        {% else %}
+          <span class="next disable"><i class="fa fa-angle-right"></i></span>
+          <span class="next disable"><i class="fa fa-angle-double-right"></i></span>
+        {% endif %}
+      </div> -->
 
-        <!-- Pagination links with page numbers -->
-        <div class="pagination">
-          {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-              [ {{ page }} ]
-            {% elsif page == 1 %}
-              <a href="{{ '/microblog/' | relative_url }}">{{ page }}</a>
-            {% else %}
-              <a href="{{ '/microblog/page' | append: page | relative_url }}">{{ page }}</a>
-            {% endif %}
-          {% endfor %}
-        </div>
+      <!-- Pagination links with page numbers -->
+      <div class="pagination">
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            [ {{ page }} ]
+          {% elsif page == 1 %}
+            <a href="{{ '/microblog/' | relative_url }}">{{ page }}</a>
+          {% else %}
+            <a href="{{ '/microblog/page' | append: page | relative_url }}">{{ page }}</a>
+          {% endif %}
+        {% endfor %}
+      </div>
   </div>
 </div>

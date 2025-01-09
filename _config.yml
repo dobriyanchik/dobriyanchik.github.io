@@ -20,7 +20,7 @@ github_username:  dobriyanchik
 email: dobriy88@yandex.ru
 linkedIn_username: vitalii-dobriian
 
-description_footer: If you have any ideas or proposals on my work or just want to connect
+description_footer: © 2025 Vitalii Dobriian
 
 # statistic analysis
 google_analytics_id: G-YR3KJ3C6HH # google analytics id
@@ -55,7 +55,7 @@ pagination:
   enabled: true
   collection: 
     microblog:
-      per_page: 5
+      per_page: 10
       sort_reverse: true
       title: "Microblog"
       permalink: /microposts/page:num/
@@ -66,7 +66,6 @@ pagination:
   per_page: 10       # Number of posts per page
   sort_reverse: true
   permalink: /page:num/  # URL format for paginated pages
-
 
 defaults:
   - scope:
