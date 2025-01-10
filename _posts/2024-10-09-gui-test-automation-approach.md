@@ -91,37 +91,37 @@ By the fact both forms have absolutely same set of controls: two text fields and
 By the fact each complex GUI control is a set of some more primitive controls baked together (some kind of mini PageObject) which assumably can be reused many times as a single entity.
 
 ```
- ┌───────────────────────┐                                                     
- │      PageObject       │                                                     
- │                       │                                                     
- │  ┌──────────┐         │                                                     
- │  │WebControl│         │                                                     
- │  └──────────┘         │    ┌─────────────────┐    ┌───────────────────────┐ 
- │  ┌──────────────┐     │    │  ComplexControl │    │      PageObject       │ 
- │  │ComplexControl├─────┼────┤                 │    │                       │ 
- │  └──────────────┘     │    │  ┌──────────┐   │    │  ┌──────────┐         │ 
- │  ┌──────────┐         │    │  │WebControl│   │    │  │WebControl│         │ 
- │  │WebControl│         │    │  └──────────┘   │    │  └──────────┘         │ 
- │  └──────────┘         │    │  ┌──────────┐   │    │  ┌──────────────┐     │ 
- │  ┌──────────┐         │    │  │WebControl│   ├────┼──┤ComplexControl│     │ 
- │  │WebControl│         │    │  └──────────┘   │    │  └──────────────┘     │ 
- │  └──────────┘         │    └─────────────────┘    │                       │ 
- └───────────────────────┘                           └───────────────────────┘ 
+ ┌────────────────┐
+ │   PageObject   │
+ │                │
+ │┌──────────┐    │
+ ││WebControl│    │
+ │└──────────┘    │  ┌──────────────┐  ┌────────────────┐ 
+ │┌──────────────┐│  │ComplexControl│  │   PageObject   │ 
+ ││ComplexControl├┼──┤              │  │                │ 
+ │└──────────────┘│  │┌──────────┐  │  │┌──────────┐    │ 
+ │┌──────────┐    │  ││WebControl│  │  ││WebControl│    │ 
+ ││WebControl│    │  │└──────────┘  │  │└──────────┘    │ 
+ │└──────────┘    │  │┌──────────┐  │  │┌──────────────┐│ 
+ │┌──────────┐    │  ││WebControl│  ├──┼┤ComplexControl││ 
+ ││WebControl│    │  │└──────────┘  │  │└──────────────┘│ 
+ │└──────────┘    │  └──────────────┘  │                │ 
+ └────────────────┘                    └────────────────┘ 
 ```
 
 But there is one more property which describes complex controls: complex control is not only a combination of primitives, it's also a combination of "behaviors". There are few very basic actions that could be done on most of elements: click and send keys (and those are usually part of most of tools/frameworks). But complex control in addition to these primitive actions have some behaviors describing interaction with it. As an example: standard Dropdown is a combination of behaviors let's call them `IExpandable` and `IHasItemSelection` (of course custom implementations can have additional behaviors)
 
 ```
-     ┌────────────────┐   ┌───────────────────┐
-     │  IExpandable   │   │ IHasItemSelection │
-     └────────────┬───┘   └───┬───────────────┘
-                  │           │             
-            ┌─────┴───────────┴─────┐       
-            │        Dropdown       │       
-            │  ┌─────────────────┐  │       
-            │  │    WebControl   │  │       
-            │  └─────────────────┘  │       
-            └───────────────────────┘              
+ ┌───────────────────┐ ┌─────────────┐
+ │ IHasItemSelection │ │ IExpandable │
+ └───────┬───────────┘ └──────┬──────┘
+         │                    │        
+        ┌┴────────────────────┴┐       
+        │       Dropdown       │       
+        │  ┌────────────────┐  │       
+        │  │   WebControl   │  │       
+        │  └────────────────┘  │       
+        └──────────────────────┘              
 ```
 
 And I think such approach should be a standard when one works on GUI test automation.
