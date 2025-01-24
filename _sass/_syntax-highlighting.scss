@@ -246,3 +246,9 @@ pre {
         .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
     }
 }
+
+@media screen and (max-width: 770px) {
+    code {
+        font-size-adjust: 0.5;
+    }
+}

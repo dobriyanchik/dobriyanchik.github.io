@@ -112,6 +112,7 @@ By the fact each complex GUI control is a set of some more primitive controls ba
 But there is one more property which describes complex controls: complex control is not only a combination of primitives, it's also a combination of "behaviors". There are few very basic actions that could be done on most of elements: click and send keys (and those are usually part of most of tools/frameworks). But complex control in addition to these primitive actions have some behaviors describing interaction with it. As an example: standard Dropdown is a combination of behaviors let's call them `IExpandable` and `IHasItemSelection` (of course custom implementations can have additional behaviors)
 
 ```
+
  ┌───────────────────┐ ┌─────────────┐
  │ IHasItemSelection │ │ IExpandable │
  └───────┬───────────┘ └──────┬──────┘
