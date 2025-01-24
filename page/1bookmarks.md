@@ -4,6 +4,7 @@ title: Bookmarks
 permalink: /bookmark/
 icon: bookmark
 type: page
+in-header: true
 ---
 
 * content

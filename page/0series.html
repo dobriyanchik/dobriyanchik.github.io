@@ -1,0 +1,58 @@
+---
+layout: default
+title: Series
+permalink: /series/
+icon: book
+type: page
+in-header: true
+---
+
+{% assign all_pages = site.posts %}
+{% assign series_pages = all_pages | where_exp:"item", "item.series" | group_by:"series" %}
+
+
+<div class="page clearfix">
+    <div class="left">
+        <h1>{{page.title}}</h1>
+        <hr>
+        <ul>
+
+            {% for series in series_pages %}
+                <h2 id="{{series.name}}">{{series.name}}</h2>
+
+                {% for post in series.items %}
+                <li>
+                    <time>
+                        {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
+                    </time>
+                    <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    <br />
+                </li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    {% for series in series_pages %}
+                    <li>
+                        <a data-scroll href="#{{ series.name }}">
+                            {{ series.name }} ({{ series.items | size }})
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script src="{{ " /js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>

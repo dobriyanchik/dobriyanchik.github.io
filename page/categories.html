@@ -23,7 +23,6 @@ type: page
                             </time>
                             <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
                             <br/>
-                            {% include category.html %}
                             {% include tag.html %}
                         </li>
                         {% endif %}
@@ -51,8 +50,6 @@ type: page
                     {% endfor %}
                 </ul>
             </div>
-            <!-- 其他div框放到这里 -->
-            <!-- <div class="side">bbbb</div> -->
         </div>
     </div>
 </div>

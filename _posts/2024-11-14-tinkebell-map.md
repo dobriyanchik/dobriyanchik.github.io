@@ -5,6 +5,7 @@ date:       2024-11-14
 categories: Science
 tags:       science chaos
 mathjax:    true
+series:     "Common chaotic systems"
 ---
 
 * content
