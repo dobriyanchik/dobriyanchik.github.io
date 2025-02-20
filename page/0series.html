@@ -20,7 +20,7 @@ in-header: true
             {% for series in series_pages %}
                 <h2 id="{{series.name}}">{{series.name}}</h2>
 
-                {% for post in series.items %}
+                {% for post in series.items reversed %}
                 <li>
                     <time>
                         {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.

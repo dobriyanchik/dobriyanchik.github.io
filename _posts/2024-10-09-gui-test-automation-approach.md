@@ -4,6 +4,7 @@ title:      "GUI test automation approach"
 date:       2024-10-09 13:00:00
 categories: ["Automated testing"]
 tags:       coding .net automated-testing gui unicorn-taf
+series:     "GUI test automation"
 ---
 
 * content
