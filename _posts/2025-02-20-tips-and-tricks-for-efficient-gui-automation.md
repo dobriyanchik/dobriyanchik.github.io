@@ -15,7 +15,7 @@ GUI automated tests are the most slow, unstable and harmful among all automated 
 
 * * *
 
-# Make things more stable
+# Increase stability
 
 ## 1. Avoid hardcoded waits
 
@@ -28,12 +28,12 @@ But there could be exceptions (everyone still uses sleeps anyway (´｡• ᵕ �
 
 ## 2. Handle loading indicators in right manner
 
-It's not enough just to wait fot loading indicator to disappear, usually it takes time for loader even to appear, firstly frontend coluld do some operations on its side and just then show loader, it could take even seconds. So it's better to wait for loader to appear and then wait for it to disappear. Unicorn has built-in mechanism to perform such waits using [LoaderHandler](https://github.com/Unicorn-TAF/ui-core/blob/master/src/Unicorn.UI.Core/Synchronization/LoaderHandler.cs). The advices here are:
+It's not enough just to wait for loading indicator to disappear, usually it takes time for loader even to appear, firstly frontend could do some operations on its side and just then show loader, it could take even seconds. So it's better to wait for loader to appear and then wait for it to disappear. Unicorn has built-in mechanism to perform such waits using [LoaderHandler](https://github.com/Unicorn-TAF/ui-core/blob/master/src/Unicorn.UI.Core/Synchronization/LoaderHandler.cs). The advices here are:
  - wait for appearance safely, does not fail here: sometimes appearance could be too fast to be caught and waiter can miss loader appearance and continue waiting
  - carefully select indicator appearance timeout to not to loose much time on possible unhandled cases
 
 
-# Make things faster
+# Increase speed
 
 ## 1. Functionality variations testing
 
@@ -43,7 +43,7 @@ Often functionality (not the UI itself) is tested through UI. In such case when 
 ## 2. Handle loading indicators smartly
 
 Let's consider a case when you have a form with a loading indicator. And suppose there is a dropdown within the form: when you select an item from the dropdown, the form is being refreshed and the loading indicator appears. To make your test stable you have to wait for the indicator to disappear before you can continue with the test. The thing is that mostly GUI implemented in such way that a form is not refreshed and/or loading indicator does not appear if you try to select already selected value. So, you can just check if the selected value is already selected and if it is, you can skip waiting for the indicator to disappear. This will make your test faster and more stable. How it is done in Unicorn.TAF:  
-The general approach which also tells about concept of reusable elements was already mentioned [here](../../../../2024/10/09/gui-test-automation-approach). Most of the UI controls interfaces in `Unicorn.UI.Core` have methods returning `bool` which puprose is to indicate whether action you tried to perform was actually performed or not. Let's return to our initial example with dropdown: it's implied that any custom dropdown has to implement [`IItemSelectable`](https://github.com/Unicorn-TAF/ui-core/blob/master/src/Unicorn.UI.Core/Controls/Interfaces/IItemSelectable.cs) interface.
+The general approach which also tells about concept of reusable elements was already mentioned [here](../../../../2024/10/09/gui-test-automation-approach). Most of the UI controls interfaces in `Unicorn.UI.Core` have methods returning `bool` which purpose is to indicate whether action you tried to perform was actually performed or not. Let's return to our initial example with dropdown: it's implied that any custom dropdown has to implement [`IItemSelectable`](https://github.com/Unicorn-TAF/ui-core/blob/master/src/Unicorn.UI.Core/Controls/Interfaces/IItemSelectable.cs) interface.
 
 Thus implementation of our custom dropdown selection logic will look like this (schematically): 
 
@@ -102,11 +102,11 @@ The advice here is to try to avoid entering the data directly to database, there
 
 ## 4. Optimize UI scenarios to replace frequent complex GUI actions with non GUI ones
 
-It's often happens that to test some specific thing you need to perform chain of actions leading to desired results (some of business workflows can require some base commonmg things to be made). If such actions are complex and frequent, it's worth to think about how to replace them with non GUI actions. With high probability you already have a separate test with tests this chain of actions in GUI (if you don't it's time to create one), there is no need to retest it many times in other tests which have different focus. This will not only speed up, but also stabilize your tests as in case of some unexpected changes in GUI, you will not get all dependent on this UI flow tests failed and they will test excactly what they are supposed to test.
+It's often happens that to test some specific thing you need to perform chain of actions leading to desired results (some of business workflows can require some base common things to be made). If such actions are complex and frequent, it's worth to think about how to replace them with non GUI actions. With high probability you already have a separate test with tests this chain of actions in GUI (if you don't it's time to create one), there is no need to retest it many times in other tests which have different focus. This will not only speed up, but also stabilize your tests as in case of some unexpected changes in GUI, you will not get all dependent on this UI flow tests failed and they will test exactly what they are supposed to test.
 
 Also some more minor actions could be optimized, for example you don't have to navigate to some page through user menus or buttons/links (again it's better to have a separate test for this), you can just directly navigate to the page using URL (if the page is reachable that way). Sometimes it's even possible to navigate to the page with additional flags in URL which open the page in desired state avoiding you to perform additional actions in GUI to get the same state. 
 
-# Make things less to support
+# Reduce support
 
 ## Do not create God-controls
 

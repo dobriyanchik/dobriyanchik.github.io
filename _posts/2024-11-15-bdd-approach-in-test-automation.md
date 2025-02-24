@@ -16,7 +16,7 @@ From my point of view and my personal (and not only mine) experience in test aut
 
 ## What is BDD
 
-For those who didn't hear about BDD: shortly the approach and underlying toolset (frameworks like [JBehave](https://jbehave.org), [Cucumber](https://cucumber.io), [SpecFlow](https://specflow.org) etc.) allow business analysts to write acceptance criterias using "special language" at the stage of forming business requirements for a product. And later those criterias **automagically** with help of the frameworks become acceptance tests: so the scenarios are "ready" when even development is not started yet. Gherkin is an example of such language used for writing, and some typical scenario from an average example is:
+For those who didn't hear about BDD: shortly the approach and underlying toolset (frameworks like [JBehave](https://jbehave.org), [Cucumber](https://cucumber.io), [SpecFlow](https://specflow.org) etc.) allow business analysts to write acceptance criteria using "special language" at the stage of forming business requirements for a product. And later those criteria **automagically** with help of the frameworks become acceptance tests: so the scenarios are "ready" when even development is not started yet. Gherkin is an example of such language used for writing, and some typical scenario from an average example is:
 
 ```gherkin
 Feature: Money Transfer
@@ -49,7 +49,7 @@ In real life I usually see or face with very typical situations:
  - I often see pretty long and complex scenarios (dozens, even sometimes hundreds of lines) parameterized with a big number of parameters what makes scenarios look not like business but old school KDT approach
  - I want to specially separate case when BDD is used to automate API or even DB tests
  - Sometimes I hear such arguments as
-    > It's easier to read scenarios and understand them, so entry treshold is lower
+    > It's easier to read scenarios and understand them, so entry threshold is lower
 
     Yes, maybe, but it's not for free: test automation team wastes more efforts to create and support BDD interlayer within test automation framework, so in total it does not bring any benefits.
 
@@ -58,12 +58,12 @@ In real life I usually see or face with very typical situations:
 2. Ideally BDD scenarios should be written by analysts on business requirements forming stage. This means that BDD approach should be integrated into project processes and be supported by them, it's not only tool which allows to write human readable test scenarios
 3. Don't choose BDD just because of you want manual QA will start white tests for you, they often won't :)
 
-Looks like all of above leads to more or less specific conditions for BDD application areas: whole project should support BDD paradygm where BDD is used for real acceptance tests created by analysts on early stages. Possibly the project should not be too big as efforts to support automation framework BDD interlayer will grow.
+Looks like all of above leads to more or less specific conditions for BDD application areas: whole project should support BDD paradigm where BDD is used for real acceptance tests created by analysts on early stages. Possibly the project should not be too big as efforts to support automation framework BDD interlayer will grow.
 
 ## BDD and AI
 
 Potentially there could be very interesting synergy of BDD and AI. Suppose BDD will benefit from AI and could significantly simplify and improve a process. As an example LLM could take a work to generate all acceptance scenarios based on business requirements (this type of work is one of the main areas where LLM is really good).
 
 ## P.S.
-I found [this post](https://gasparnagy.com/2019/05/clean-up-bad-bdd-scenarios/) bringing right thoughts in part of work on creation or adatation of BDD scenarios.  
+I found [this post](https://gasparnagy.com/2019/05/clean-up-bad-bdd-scenarios/) bringing right thoughts in part of work on creation or adaptation of BDD scenarios.  
 Personally for me **"right"** BDD is still a white spot on the map of my experience, but it would be interesting for me to face with such real world example.

@@ -43,14 +43,14 @@ Some of features I mean are:
 
 Some of these features are part of reporting libraries. Steps are supported by ReportPortal, Allure, TestIT. Connection to manual test case is supported by Allure and TestIT. But they are baked into reporting libs, not the framework itself. 
 
-Let's imagine a case when one uses Allure static report as current reporting system. The report has steps, links to test cases and bugs test related to, but it's not suitable for team work and not editable. And one day team decides to change reporting to ReportPortal (with all hundres or thousands of already existing autotests). That's where the hell comes in. Report Portal has it's own implementations of these features and the team needs to replace all Allure stuff by ReportPortal stuff. For steps it will be just mass replacement of usages and possibly steps attributes, but links to test cases and bugs will just disappear as report portal lib does not support it from the box.
+Let's imagine a case when one uses Allure static report as current reporting system. The report has steps, links to test cases and bugs test related to, but it's not suitable for team work and not editable. And one day team decides to change reporting to ReportPortal (with all hundreds or thousands of already existing autotests). That's where the hell comes in. Report Portal has it's own implementations of these features and the team needs to replace all Allure stuff by ReportPortal stuff. For steps it will be just mass replacement of usages and possibly steps attributes, but links to test cases and bugs will just disappear as report portal lib does not support it from the box.
 As test automation engineer I just want to change one/few lines in my framework to move to another reporting system, not to refactor everything!
 
 ### GUI Automated testing
 
-As I already mentioned in [my previos post about GUI automated testing](./2024/10/09/gui-test-automation-approach) "Test automation engineer is a human who wants to interact with GUI in the same way independently on specific GUI nature". 
+As I already mentioned in [my previous post about GUI automated testing](./2024/10/09/gui-test-automation-approach) "Test automation engineer is a human who wants to interact with GUI in the same way independently on specific GUI nature". 
 
-It's logical and obvious to have same api for working with GUI regardless on it's nature and platform.
+It's logical and obvious to have same API for working with GUI regardless on it's nature and platform.
 
 ## Unicorn.TAF
 I tried to write core of [Unicorn.TAF](https://unicorn-taf.github.io) framework considering aspects above. My goal was to make a framework for test automation engineers, not for developers.

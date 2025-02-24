@@ -21,13 +21,13 @@ Install WSL if not installed
 wsl --install
 ```
 
-When WSL is installed need to install linux distributive (Debian for example)
+When WSL is installed need to install Linux distributive (Debian for example)
 
 ```bash
 wsl --install -d Debian
 ```
 
-After setup is complete a promt to create new user appears
+After setup is complete a prompt to create new user appears
 
 # Setup Jekyll
 

@@ -18,7 +18,7 @@ There are a lot of different tools and frameworks for GUI testing available to t
 ## Problem statement
 
 ### 1. Different APIs 
-All GUI testing libraries have different APIs which is worsed by the presence of different platforms (Web, Desktop, Mobile). 
+All GUI testing libraries have different APIs what is even more worse by the presence of different platforms (Web, Desktop, Mobile). 
  - description of the same GUI for different platform or using different libs is completely differ.
  - some libs support PageObject approach from the box, some - not
  - checks on UI elements are different everywhere
@@ -131,7 +131,7 @@ And I think such approach should be a standard when one works on GUI test automa
 ## Unicorn.TAF
 When I started to develop UI modules of [Unicorn.TAF](https://unicorn-taf.github.io), aspects I highlighted above were most significant drivers for me. I wanted to free test automation from using different UI libs APIs, co-living assertion libs or approaches to check UI on different platforms.
 
-Unicorn provides with common and unified mechanism of work with GUI which is platform and UI independent and could be extended to use any underlying "driver" lib keeping the same unified API. it provides with set of already defined "behaviors" described by interfaces such as `IExpandable`, `ISelectable`, `ILoadable` etc. what makes possible to reuse common UI asssertions among all platforms and UI types and to obtain high level of reusability and to speed up coding process.
+Unicorn provides with common and unified mechanism of work with GUI which is platform and UI independent and could be extended to use any underlying "driver" lib keeping the same unified API. it provides with set of already defined "behaviors" described by interfaces such as `IExpandable`, `ISelectable`, `ILoadable` etc. what makes possible to reuse common UI assertions among all platforms and UI types and to obtain high level of reusability and to speed up coding process.
 
 For the same example with Sign In form presented in first section code for Web and Desktop with Unicorn will look almost the same:
 

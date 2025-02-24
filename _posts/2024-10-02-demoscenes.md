@@ -8,7 +8,7 @@ tags:   coding art
 * content
 {:toc}
 
-About 15 years ago when I studied at university we had course of lectures on Assembly language. One day I with a classmate were in process of preparation to seminar where we planned to demonstrate our work with some graphics visualisations programmed on Assembly. During the preparation we had been searching for some usefull references for our work over the internet and found some really interesting area called **Demoscenes** which I personally consider as art in programming and visualization.
+About 15 years ago when I studied at university we had course of lectures on Assembly language. One day I with a classmate were in process of preparation to seminar where we planned to demonstrate our work with some graphics visualizations programmed on Assembly. During the preparation we had been searching for some useful references for our work over the internet and found some really interesting area called **Demoscenes** which I personally consider as art in programming and visualization.
 ![fr-041: debris](/assets/images/demoscene-fr-041-debris.jpg)
 
 * * *
